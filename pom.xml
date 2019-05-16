@@ -27,7 +27,7 @@
 	<repository>
 		<id>releases</id>
 		<name>Releases</name>
-		<url>http://localHost:8080/repository/etc/</url>
+		<url>http://localHost:8080/repository/YourRepo/</url>
 	</repository>
 	<snapshotRepository>
 		<id>snapshots</id>
@@ -35,4 +35,22 @@
 		<url>http://localHost:8080/repository/YourRepo/</url>
 	</snapshotRepository>
 </distributionManagement>
+	
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                  http://maven.apache.org/xsd/settings-1.0.0.xsd">
+ <servers>
+<server>
+  <id>YourRepo</id>
+  <username>admin</username>
+  <password>password</password>
+</server>
+<server>
+  <id>releases</id>
+  <username>admin</username>
+  <password>password</password>
+</server>
+</servers>
+</settings>
 </project>
